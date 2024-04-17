@@ -49,6 +49,17 @@
             Console.WriteLine($"La somma di tutti i numeri inseriti è: {somma}");
 
 
+            //Calcola la somma e la media dei numeri da 2 a 10.
+            Console.WriteLine("Snack 4");
+            int sommaRange = 0;
+
+            for (int i = 2; i < 11; i++)
+            {
+                sommaRange += i;
+            }
+            Console.WriteLine($"Eccoti la somma e la media dei numeri da 2 a 10: {sommaRange}");
+
+
 
         }
     }
