@@ -171,6 +171,24 @@ namespace csharp_typesystem_snacks
             }
             Console.WriteLine();
             Console.WriteLine($"La somma degli elementi è: {sommaTracciata}");
+
+            //Fai inserire un numero, che chiameremo N, all’utente. Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
+            Console.WriteLine("Snack 10");
+            Console.WriteLine("Inserisci un numero:");
+            int N = int.Parse(Console.ReadLine());
+
+            Random rnd = new Random();
+                for (int i = 1; i <= N; i++) {
+
+                       Console.WriteLine($"Array {i}:");
+
+                        for (int k = 0; k < 10; k++) {
+                        
+                            Console.Write(rnd.Next(1, 101) + " ");
+                        
+                        }
+                        Console.WriteLine();
+            }
         }
     }
 }
