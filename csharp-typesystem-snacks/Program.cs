@@ -19,21 +19,37 @@
             }
 
             Console.WriteLine("Snack 2");
-            Console.WriteLine("Dammi due parole e ti dirò la più lunga! ;P");
+            Console.WriteLine("Dammi due parole e te le metterò in ordine di lunghezza decrescente! ;P");
             Console.WriteLine("Parola 1: ");
             string parola1 = Console.ReadLine();
             Console.WriteLine("Parola 2: ");
             string parola2 =  Console.ReadLine();
             if (parola1.Length < parola2.Length)
             {
-                Console.WriteLine($"La parola più lunga è {parola2}");
+                Console.WriteLine($"Ecco le parole in ordine di lunghezza decrescente è {parola2}, {parola1}");
             } else
             {
-                Console.WriteLine($"La parola più lunga è {parola1}");
+                Console.WriteLine($"Ecco le parole in ordine di lunghezza decrescente è {parola1}, {parola2}");
             }
 
+            Console.WriteLine("Snack 3");
+            Console.WriteLine("Farò la somma di tutti i 10 numeri che mi darai! SONO FORTISSIMO!");
 
-            
+            //creazione variabile somma
+            decimal somma = 0;
+
+           for (int i = 0; i < 10; i++)
+            {
+            Console.WriteLine("Dammi un numero: ");
+            decimal numero = decimal.Parse(Console.ReadLine());
+
+                somma += numero;
+
+            }
+            Console.WriteLine($"La somma di tutti i numeri inseriti è: {somma}");
+
+
+
         }
     }
 }
