@@ -124,7 +124,19 @@ namespace csharp_typesystem_snacks
                 }
             }
 
-
+            //Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+            Console.WriteLine("Snack 8");
+            int[] arrayDispari = { 1, 2, 3, 4, 5, 6 };
+            Console.WriteLine("L'array è questo: 1, 2, 3, 4, 5, 6");
+            int sommaDispari = 0;
+            for (int i=0; i<arrayDispari.Length; i++)
+            {
+                if ((i + 1) % 2 != 0)
+                {
+                    sommaDispari += arrayDispari[i];
+                }
+            }
+            Console.WriteLine($"Ecco la somma di tutti gli elementi in posizione dispari: {sommaDispari}");
         }
     }
 }
