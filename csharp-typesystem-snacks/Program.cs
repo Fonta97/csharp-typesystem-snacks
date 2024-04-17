@@ -53,13 +53,16 @@ namespace csharp_typesystem_snacks
 
             //Calcola la somma e la media dei numeri da 2 a 10.
             Console.WriteLine("Snack 4");
-            int sommaRange = 0;
-
+            //creazione somma
+            decimal sommaRange = 0;
+            decimal media = 0;
+            //ciclo somma fino ad 11
             for (int i = 2; i < 11; i++)
             {
                 sommaRange += i;
             }
-            Console.WriteLine($"Eccoti la somma e la media dei numeri da 2 a 10: {sommaRange}");
+                media = sommaRange / 9;
+            Console.WriteLine($"Eccoti la somma e la media dei numeri da 2 a 10: {sommaRange} , {media}");
 
             //Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
             Console.WriteLine("Snack 5");
