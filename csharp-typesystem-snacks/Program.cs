@@ -59,7 +59,17 @@
             }
             Console.WriteLine($"Eccoti la somma e la media dei numeri da 2 a 10: {sommaRange}");
 
-
+            //Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
+            Console.WriteLine("Snack 5");
+            Console.WriteLine("Dammi un numero e se è pari te lo ristampo, altrimenti ti stamperò il numero pari successivo!");
+            int PaliODispali = int.Parse(Console.ReadLine());
+            if (PaliODispali % 2 == 0)
+            {
+                Console.WriteLine($"Si, il numero {PaliODispali} è pari!");
+            } else
+            {
+                Console.WriteLine($"No, il numero {PaliODispali} non è pari, eccoti il numero pari successivo ad esso: {PaliODispali+1}" );
+            }
 
         }
     }
