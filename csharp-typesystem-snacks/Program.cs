@@ -137,6 +137,37 @@ namespace csharp_typesystem_snacks
                 }
             }
             Console.WriteLine($"Ecco la somma di tutti gli elementi in posizione dispari: {sommaDispari}");
+
+            //Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
+            Console.WriteLine("Snack 9");
+            // Creiamo un array vuoto
+            int[] arrayResize = new int[0];
+
+            // Variabile per tenere traccia della somma degli elementi
+            int sommaTracciata = 0;
+
+            // Continuiamo a chiedere all'utente di inserire un numero finché la somma degli elementi è minore di 50
+            while (sommaTracciata < 50)
+            {
+                Console.WriteLine("Inserisci un numero:");
+                int numeroPazzo = int.Parse(Console.ReadLine());
+
+                // Aggiungiamo il numero all'array
+                Array.Resize(ref arrayResize, arrayResize.Length + 1);
+                arrayResize[arrayResize.Length - 1] = numeroPazzo;
+
+                // Aggiorniamo la somma degli elementi nell'array
+                sommaTracciata += numeroPazzo;
+            }
+
+            // Stampiamo l'array e la somma degli elementi
+            Console.WriteLine("Array inserito:");
+            foreach (int numPazzo in arrayResize)
+            {
+                Console.Write(numPazzo + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine($"La somma degli elementi è: {sommaTracciata}");
         }
     }
 }
