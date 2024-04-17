@@ -1,4 +1,6 @@
-﻿namespace csharp_typesystem_snacks
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace csharp_typesystem_snacks
 {
     internal class Program
     {
@@ -71,6 +73,29 @@
                 Console.WriteLine($"No, il numero {PaliODispali} non è pari, eccoti il numero pari successivo ad esso: {PaliODispali+1}" );
             }
 
+            //In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+            Console.WriteLine("Snack 6");
+
+            string[] invitati = { "Gatsby", "Paolo", "Anna", "Rey Misteryo"};
+            bool presente = false;
+            Console.WriteLine($"Benvenuto alla festa del grande Gatsby! Dammi il tuo nome e ti dirò se sei sulla lista!");
+            string nomeTuo = Console.ReadLine();
+            foreach (string invitato in invitati)
+            {
+                if (invitato == nomeTuo) {
+                    presente = true;
+                }
+            }
+            if (presente==true)
+            {
+                Console.WriteLine("Entra pure broski!");
+            } else
+            {
+                Console.WriteLine("Ti mando via a calci imbucato!");
+            }
+
+            // Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+            Console.WriteLine("Snack 7");
         }
     }
 }
